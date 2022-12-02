@@ -191,10 +191,7 @@ public class Renderer {
             }            
         }
     }
-
-    // Warning! Slow. No SIMD acceleration implemented.
-    // This method casts single rays by creating ray packets with identical rays.
-    // This is actually slower than not using ray packets at all.
+    
     private void computeReflection(Color[] color, RayPacket rays, HitInfoPacket hitInfo,int depth) {
         Color[] receivedColor = new Color[RayPacket.SIZE]; 
         
